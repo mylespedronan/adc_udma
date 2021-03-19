@@ -61,7 +61,7 @@ void ADC0SS3_Handler(void){
 				// Increment counter for primary buffer recent filled 
 				ui32BufACount++;
 
-				//Delay(1);
+				Delay(1);
 				
 				GPIOA->DATA ^= PIN2;
 			
@@ -77,7 +77,7 @@ void ADC0SS3_Handler(void){
 				// Increment counter for primary buffer recent filled 
 				ui32BufCCount++;
 			
-				//Delay(1);	
+				Delay(1);	
 			
 				GPIOA->DATA ^= PIN3;
 			
@@ -93,7 +93,7 @@ void ADC0SS3_Handler(void){
 				// Increment counter for primary buffer recent filled 
 				ui32BufBCount++;
 			
-				//Delay(1);			
+				Delay(1);			
 			
 				GPIOA->DATA ^= PIN4;
 			
@@ -116,7 +116,7 @@ void ADC0SS3_Handler(void){
 				// Increment counter for primary buffer recent filled 
 				ui32BufBCount++;					
 
-				//Delay(1);
+				Delay(1);
 			
 				GPIOA->DATA ^= PIN4;
 				
@@ -132,7 +132,7 @@ void ADC0SS3_Handler(void){
 				// Increment counter for primary buffer recent filled 
 				ui32BufACount++;				
 
-				//Delay(1);		
+				Delay(1);		
 
 				GPIOA->DATA ^= PIN2;
 				
@@ -148,7 +148,7 @@ void ADC0SS3_Handler(void){
 				// Increment counter for primary buffer recent filled 
 				ui32BufCCount++;			
 
-				//Delay(1);
+				Delay(1);
 	
 				GPIOA->DATA ^= PIN3;
 				

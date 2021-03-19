@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\adc_udma.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\adc_udma.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Fri Mar 19 15:39:54 2021
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Fri Mar 19 16:20:15 2021
 <BR><P>
 <H3>Maximum Stack Usage =        136 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1338,19 +1338,20 @@ Global Symbols
 
 <P><STRONG><a name="[d1]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, indicate_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[1d]"></a>ADC0SS3_Handler</STRONG> (Thumb, 452 bytes, Stack size 8 bytes, bsp.o(i.ADC0SS3_Handler))
+<P><STRONG><a name="[1d]"></a>ADC0SS3_Handler</STRONG> (Thumb, 488 bytes, Stack size 8 bytes, bsp.o(i.ADC0SS3_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136 + Unknown Stack Size
 <LI>Call Chain = ADC0SS3_Handler &rArr; __2sprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART0_printString
+<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_tm4c123.o(RESET)
 </UL>
-<P><STRONG><a name="[9d]"></a>ADC_init</STRONG> (Thumb, 98 bytes, Stack size 4 bytes, bsp.o(i.ADC_init))
+<P><STRONG><a name="[9e]"></a>ADC_init</STRONG> (Thumb, 98 bytes, Stack size 4 bytes, bsp.o(i.ADC_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = ADC_init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay
+<BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_init
 </UL>
@@ -1363,7 +1364,7 @@ Global Symbols
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_init
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_start
 <LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_init
-<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_init
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1375,7 +1376,7 @@ Global Symbols
 <P><STRONG><a name="[a3]"></a>DMA_init</STRONG> (Thumb, 58 bytes, Stack size 4 bytes, bsp.o(i.DMA_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = DMA_init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay
+<BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_init
 </UL>
@@ -1388,18 +1389,19 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_init
 </UL>
 
-<P><STRONG><a name="[9e]"></a>Delay</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, bsp.o(i.Delay))
+<P><STRONG><a name="[9d]"></a>Delay</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, bsp.o(i.Delay))
 <BR><BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WTimer_init
 <LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_init
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_init
 <LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_init
-<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_init
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_init
+<LI><a href="#[1d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0SS3_Handler
 </UL>
 
 <P><STRONG><a name="[a1]"></a>GPIO_init</STRONG> (Thumb, 54 bytes, Stack size 4 bytes, bsp.o(i.GPIO_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = GPIO_init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay
+<BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_init
 </UL>
@@ -1422,7 +1424,7 @@ Global Symbols
 <P><STRONG><a name="[a2]"></a>UART_init</STRONG> (Thumb, 98 bytes, Stack size 4 bytes, bsp.o(i.UART_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = UART_init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay
+<BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_init
 </UL>
@@ -1430,7 +1432,7 @@ Global Symbols
 <P><STRONG><a name="[a0]"></a>WTimer_init</STRONG> (Thumb, 60 bytes, Stack size 4 bytes, bsp.o(i.WTimer_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = WTimer_init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay
+<BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_init
 </UL>
